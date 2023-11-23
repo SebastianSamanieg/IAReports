@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+   <title>Reporte empresarial AdventureWorks2019</title>
+   <style>
+       .container {
+           /* Add your styles for the container here */
+       }
+       .card-body {
+           text-align: center;
+           margin-bottom: 20px;
+       }
+       .card {
+           max-width: 400px;
+           margin: auto;
+       }
+       .container-fluid {
+           background-color: white;
+           padding: 20px;
+       }
+       /* Add your other styles here */
+   </style>
 </head>
 <body>
-<h1>Reporte Generado</h1>
-<div> {{ plot_div|safe }}</div>
-<div> {{ table|safe }}</div>
+   <div class="container">
+       <h2 class="text-primary text-center mt-4 mb-4">Reporte empresarial AdventureWorks2019</h2>
+   </div>
+   <div class="row" style="display: flex; justify-content: center; margin-bottom: 20px;">
+       <div class="card">
+           <div class="card-body">
+               <input id="sql-query" type="text" placeholder="Ingrese la consulta aquí" class="form-control">
+               <button id="button-sql" class="btn btn-primary mt-3">Ejecutar Consulta</button>
+           </div>
+       </div>
+   </div>
+   <h1>Reporte Generado</h1>
+   <div> {{ plot_div|safe }}</div>
+   <div> {{ table|safe }}</div>
+   <div id="tabla-ventas"></div>
+   <div class="row">
+       <div class="card">
+           <h4 class="text-primary mt-4">Formato SQL</h4>
+           <div id="sql-statement" class="mt-2" style="white-space: pre-wrap;"></div>
+       </div>
+   </div>
 </body>
 </html>
